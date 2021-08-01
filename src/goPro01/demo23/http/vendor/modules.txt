@@ -1,0 +1,83 @@
+# github.com/StackExchange/wmi v0.0.0-20210224194228-fe8f1750fd46
+## explicit
+github.com/StackExchange/wmi
+# github.com/go-ole/go-ole v1.2.5
+## explicit
+github.com/go-ole/go-ole
+github.com/go-ole/go-ole/oleutil
+# github.com/go-vgo/robotgo v0.93.1
+## explicit
+github.com/go-vgo/robotgo
+github.com/go-vgo/robotgo/clipboard
+# github.com/lxn/win v0.0.0-20210218163916-a377121e959e
+## explicit
+github.com/lxn/win
+# github.com/otiai10/gosseract v2.2.1+incompatible
+github.com/otiai10/gosseract
+# github.com/robotn/gohook v0.30.5
+github.com/robotn/gohook
+# github.com/robotn/xgb v0.0.0-20190912153532-2cb92d044934
+github.com/robotn/xgb
+github.com/robotn/xgb/shape
+github.com/robotn/xgb/xinerama
+github.com/robotn/xgb/xproto
+# github.com/robotn/xgbutil v0.0.0-20190912154524-c861d6f87770
+github.com/robotn/xgbutil
+github.com/robotn/xgbutil/ewmh
+github.com/robotn/xgbutil/xevent
+github.com/robotn/xgbutil/xprop
+# github.com/shirou/gopsutil v3.21.3+incompatible
+## explicit
+github.com/shirou/gopsutil/cpu
+github.com/shirou/gopsutil/internal/common
+github.com/shirou/gopsutil/mem
+github.com/shirou/gopsutil/net
+github.com/shirou/gopsutil/process
+# github.com/tklauser/go-sysconf v0.3.5
+## explicit
+github.com/tklauser/go-sysconf
+# github.com/tklauser/numcpus v0.2.2
+github.com/tklauser/numcpus
+# github.com/vcaesar/gops v0.10.2
+github.com/vcaesar/gops
+# github.com/vcaesar/imgo v0.12.1
+github.com/vcaesar/imgo
+# github.com/vcaesar/tt v0.11.0
+github.com/vcaesar/tt
+# golang.org/x/crypto v0.0.0-20210322153248-0c34fe9e7dc2
+## explicit
+golang.org/x/crypto/chacha20
+golang.org/x/crypto/chacha20poly1305
+golang.org/x/crypto/cryptobyte
+golang.org/x/crypto/cryptobyte/asn1
+golang.org/x/crypto/curve25519
+golang.org/x/crypto/hkdf
+golang.org/x/crypto/internal/subtle
+golang.org/x/crypto/poly1305
+# golang.org/x/image v0.0.0-20210220032944-ac19c3e999fb
+## explicit
+golang.org/x/image/bmp
+# golang.org/x/net v0.0.0-20210331212208-0fccb6fa2b5c
+## explicit
+golang.org/x/net/dns/dnsmessage
+golang.org/x/net/http/httpguts
+golang.org/x/net/http/httpproxy
+golang.org/x/net/http2/hpack
+golang.org/x/net/idna
+golang.org/x/net/lif
+golang.org/x/net/route
+# golang.org/x/sys v0.0.0-20210403161142-5e06dd20ab57
+## explicit
+golang.org/x/sys/cpu
+golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/unix
+golang.org/x/sys/windows
+# golang.org/x/text v0.3.6
+## explicit
+golang.org/x/text/secure/bidirule
+golang.org/x/text/transform
+golang.org/x/text/unicode/bidi
+golang.org/x/text/unicode/norm
+# sourcegraph.com/sourcegraph/go-selenium v0.0.0-20170113155244-3da7d00aac9c
+## explicit
+sourcegraph.com/sourcegraph/go-selenium

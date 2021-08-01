@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:elithrar" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:mike" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:pr" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="65566869-d864-4e64-b6b5-103dad585b4c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="D:\Go\go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/github.com/astaxie/beego" />
+  </component>
+  <component name="ProjectId" id="1rdm1riGg9XZ3DAtneBNjpVCoUY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MyCCALL/MES2.0" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Go\GoProject\src\MyCCALL" />
+      <recent name="D:\Go\GoProject\src\MyCCALL\MyCC05" />
+      <recent name="D:\Go\GoProject\src\MyCCALL\MyCC02" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Go\GoProject\src\MyCCALL\MES2.0" />
+      <recent name="D:\Go\GoProject\src\MyCCALL\asset-transfer-basic\MyCC06" />
+      <recent name="D:\Go\GoProject\src\MyCCALL\MyCC04" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build mes.go (1)">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="src" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <filePath value="$PROJECT_DIR$" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build ABC.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="src" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <filePath value="$PROJECT_DIR$/MyCCALL/MyCC01/ABC.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build fabcar.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="src" />
+      <working_directory value="$PROJECT_DIR$/MyCCALL/MyCC06/go" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/MyCCALL/MyCC06/go/fabcar.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build goPro01/demo11/char01 (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="src" />
+      <working_directory value="$PROJECT_DIR$/goPro01/demo11/char01" />
+      <kind value="DIRECTORY" />
+      <filePath value="$PROJECT_DIR$/goPro01/demo11/char01/charTest.go" />
+      <package value="goPro01/demo11/char01" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build mes" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="src" />
+      <working_directory value="$PROJECT_DIR$/MyCCALL/MES" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/MyCCALL/MES/mes.go" />
+      <package value="mes" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build mes3.0" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="src" />
+      <working_directory value="$PROJECT_DIR$/MyCCALL/MES3.0" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/MyCCALL/MES3.0/mes.go" />
+      <package value="mes3.0" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build mes.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="src" />
+      <working_directory value="$PROJECT_DIR$/MyCCALL/MES3.0" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/MyCCALL/MES3.0/mes.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build mes.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="src" />
+      <working_directory value="$PROJECT_DIR$/MyCCALL/MES2.0" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/MyCCALL/MES2.0/mes.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build mes.go (1)" />
+        <item itemvalue="Go Build.go build mes3.0" />
+        <item itemvalue="Go Build.go build mes.go" />
+        <item itemvalue="Go Build.go build mes" />
+        <item itemvalue="Go Build.go build fabcar.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="https://goproxy.cn,direct" />
+      </map>
+    </environment>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2859" y="198" width="1089" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619314373853">
+      <screen x="2560" y="127" width="1536" height="824" />
+    </state>
+    <state x="2859" y="198" width="1089" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.127.1536.824/0.0.2048.1112@2560.127.1536.824" timestamp="1619314373853" />
+    <state x="3184" y="311" key="FileChooserDialogImpl" timestamp="1619314228578">
+      <screen x="2560" y="127" width="1536" height="824" />
+    </state>
+    <state x="3184" y="311" key="FileChooserDialogImpl/2560.127.1536.824/0.0.2048.1112@2560.127.1536.824" timestamp="1619314228578" />
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1619598616770">
+      <screen x="2560" y="127" width="1536" height="824" />
+    </state>
+    <state width="2005" height="172" key="GridCell.Tab.0.bottom/2560.127.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619530535913" />
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom/2560.127.1536.824/0.0.2048.1112@2560.127.1536.824" timestamp="1619598616770" />
+    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1619598616770">
+      <screen x="2560" y="127" width="1536" height="824" />
+    </state>
+    <state width="2005" height="172" key="GridCell.Tab.0.center/2560.127.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619530535913" />
+    <state width="1493" height="2" key="GridCell.Tab.0.center/2560.127.1536.824/0.0.2048.1112@2560.127.1536.824" timestamp="1619598616770" />
+    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1619598616770">
+      <screen x="2560" y="127" width="1536" height="824" />
+    </state>
+    <state width="2005" height="172" key="GridCell.Tab.0.left/2560.127.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619530535913" />
+    <state width="1493" height="2" key="GridCell.Tab.0.left/2560.127.1536.824/0.0.2048.1112@2560.127.1536.824" timestamp="1619598616770" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1619598616770">
+      <screen x="2560" y="127" width="1536" height="824" />
+    </state>
+    <state width="2005" height="172" key="GridCell.Tab.0.right/2560.127.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619530535913" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right/2560.127.1536.824/0.0.2048.1112@2560.127.1536.824" timestamp="1619598616770" />
+    <state width="2005" height="375" key="GridCell.Tab.1.bottom" timestamp="1619442772345">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="375" key="GridCell.Tab.1.bottom/2560.127.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619442772345" />
+    <state width="1342" height="258" key="GridCell.Tab.1.bottom/2560.127.1536.824/0.0.2048.1112@2560.127.1536.824" timestamp="1619317309022" />
+    <state width="2005" height="375" key="GridCell.Tab.1.center" timestamp="1619442772345">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="375" key="GridCell.Tab.1.center/2560.127.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619442772345" />
+    <state width="1342" height="258" key="GridCell.Tab.1.center/2560.127.1536.824/0.0.2048.1112@2560.127.1536.824" timestamp="1619317309022" />
+    <state width="2005" height="375" key="GridCell.Tab.1.left" timestamp="1619442772345">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="375" key="GridCell.Tab.1.left/2560.127.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619442772345" />
+    <state width="1342" height="258" key="GridCell.Tab.1.left/2560.127.1536.824/0.0.2048.1112@2560.127.1536.824" timestamp="1619317309022" />
+    <state width="2005" height="375" key="GridCell.Tab.1.right" timestamp="1619442772345">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="375" key="GridCell.Tab.1.right/2560.127.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619442772345" />
+    <state width="1342" height="258" key="GridCell.Tab.1.right/2560.127.1536.824/0.0.2048.1112@2560.127.1536.824" timestamp="1619317309022" />
+    <state x="2985" y="278" key="IDE.errors.dialog" timestamp="1619317614091">
+      <screen x="2560" y="127" width="1536" height="824" />
+    </state>
+    <state x="2985" y="278" key="IDE.errors.dialog/2560.127.1536.824/0.0.2048.1112@2560.127.1536.824" timestamp="1619317614091" />
+    <state x="705" y="176" key="SettingsEditor" timestamp="1619420729202">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="705" y="176" key="SettingsEditor/2560.127.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619420729202" />
+    <state x="2906" y="188" key="SettingsEditor/2560.127.1536.824/0.0.2048.1112@2560.127.1536.824" timestamp="1619317802187" />
+    <state x="3075" y="307" width="672" height="503" key="search.everywhere.popup" timestamp="1619596181698">
+      <screen x="2560" y="127" width="1536" height="824" />
+    </state>
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/2560.127.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619534797555" />
+    <state x="3075" y="307" width="672" height="503" key="search.everywhere.popup/2560.127.1536.824/0.0.2048.1112@2560.127.1536.824" timestamp="1619596181698" />
+  </component>
+</project>
