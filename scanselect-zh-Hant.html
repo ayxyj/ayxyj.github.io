@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/scanstyle.css">
+    <script type="text/javascript" src="./js/jsQR.js"></script>
+    <title>Scan Qrcode</title>
+</head>
+
+<body>
+    <video class="video" id="camera--view" autoplay playsinline></video>
+    <canvas id="canvas" hidden></canvas>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Scan select</button>
+        <div id="language" class="dropdown-content">
+            <a href="./scanselect-zh-Hans.html">简体中文</a>
+            <a href="./scanselect-zh-Hant.html">繁體中文</a>
+            <a href="./scanselect-en.html">English</a>
+        </div>
+    </div>
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("language").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        var videoView = document.getElementById("camera--view");
+        var canvasElement = document.getElementById("canvas");
+        var canvas = canvasElement.getContext("2d");
+        var constraints = {
+            audio: false,
+            video: {
+                width: { min: 320, ideal: 1280, max: 2560 },
+                height: { min: 240, ideal: 720, max: 1440 },
+                frameRate: {
+                    ideal: 120,
+                    min: 10
+                },
+                facingMode: "environment",
+            }
+        };
+
+        function drawLine(begin, end, color) {
+            canvas.beginPath();
+            canvas.moveTo(begin.x, begin.y);
+            canvas.lineTo(end.x, end.y);
+            canvas.lineWidth = 4;
+            canvas.strokeStyle = color;
+            canvas.stroke();
+        };
+
+        function videoStart() {
+            navigator.mediaDevices
+                .getUserMedia(constraints)
+                .then(function (stream) {
+                    //将视频流设置为video元素的源
+                    videoView.srcObject = stream;
+                    requestAnimationFrame(tick);
+                })
+                .catch(function (error) {
+                    console.error("Something is wrong.", error);
+                });
+        };
+
+        function tick() {
+            if (videoView.readyState === videoView.HAVE_ENOUGH_DATA) {
+                //不显示扫描二维码的canvas
+                canvasElement.hidden = true;
+                canvasElement.height = videoView.videoHeight;
+                canvasElement.width = videoView.videoWidth;
+                canvas.drawImage(videoView, 0, 0, canvasElement.width, canvasElement.height);
+                var imageData = canvas.getImageData(0, 0, canvasElement.width, canvasElement.height);
+                var code = jsQR(imageData.data, imageData.width, imageData.height, {
+                    inversionAttempts: "dontInvert",
+                });
+                if (code) {
+                    drawLine(code.location.topLeftCorner, code.location.topRightCorner, "#FF3B58");
+                    drawLine(code.location.topRightCorner, code.location.bottomRightCorner, "#FF3B58");
+                    drawLine(code.location.bottomRightCorner, code.location.bottomLeftCorner, "#FF3B58");
+                    drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#FF3B58");
+                    var linkhttp = code.data;
+                    console.log('qrcode begins with: ', linkhttp.substring(0, 5));
+                    if (linkhttp.substring(0, 5) === 'https') {
+                        console.log('qrcode is: ', code.data);
+                        var r = confirm("確定跳轉到 " + linkhttp + " 嗎？");
+                        if (r) {
+                            window.location.assign(linkhttp);
+                        } else {
+                            console.log('取消跳转');
+                        }
+                    } else {
+                        console.log('qrcode has nohttps');
+                    }
+                } else {
+                    console.log('no qrcode.');
+                }
+            }
+            //1.5秒扫描一次
+            setTimeout(() => {
+                requestAnimationFrame(tick);
+            }, 1500);
+        }
+        window.addEventListener("load", videoStart, false);
+    </script>
+</body>
+
+</html>
