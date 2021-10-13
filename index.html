@@ -14,7 +14,7 @@
 <video class="video" id="camera--view" autoplay playsinline></video>
 <canvas id="canvas" hidden></canvas>
 <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">网络检查</button>
+  <button onclick="myFunction()" ondblclick="tclick()" class="dropbtn">网络检查</button>
 </div>
 
 <script>
@@ -32,18 +32,27 @@
 
   var doorLink = getQueryVariable("doorLink")
 
-  /* When the user clicks on the button,
-  toggle between hiding and showing the dropdown content */
+  var timeId = null;
   function myFunction() {
-    if (doorLink) {
-      info = "网络正常,请对准二维码扫描!"
-    } else {
-      info = "网络连接失败,请检查网络地址!"
-    }
-    ans = confirm(info)
-    if (!ans&&doorLink){
-      window.location.assign(doorLink);
-    }
+    clearTimeout(timeId);
+    timeId = window.setTimeout(function () {
+      if (doorLink) {
+        info = "网络正常,请对准二维码扫描!";
+      } else {
+        info = "网络连接失败,请检查网络地址!";
+      }
+      alert(info);
+    },300);
+  }
+  function tclick(){
+    clearTimeout(timeId);
+    timeId = window.setTimeout(function () {
+      if (doorLink) {
+        window.location.assign(doorLink);
+      } else {
+        alert("网络连接失败,请检查网络地址!");
+      }
+    },300)
   }
 
   // Close the dropdown if the user clicks outside of it
@@ -148,7 +157,7 @@
     }
     setTimeout(() => {
       requestAnimationFrame(tick);
-    }, 1500);
+    }, 500);
   };
 
   window.addEventListener("load", videoStart, false);
