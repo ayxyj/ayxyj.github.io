@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./css/scanstyle.css">
+  <script type="text/javascript" src="./js/jsQR.js"></script>
+  <title>Scan Qrcode</title>
+</head>
+
+<body>
+<video class="video" id="camera--view" autoplay playsinline></video>
+<canvas id="canvas" hidden></canvas>
+<div class="dropdown">
+  <button onclick="myFunction()" ondblclick="tclick()" class="dropbtn">网络检查</button>
+</div>
+
+<script>
+  function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split("=");
+      if (pair[0] == variable) {
+        return pair[1];
+      }
+    }
+    return (false);
+  }
+
+  var doorLink = getQueryVariable("doorLink")
+
+  var timeId = null;
+  function myFunction() {
+    clearTimeout(timeId);
+    timeId = window.setTimeout(function () {
+      if (doorLink) {
+        info = "网络正常,请对准二维码扫描!";
+      } else {
+        info = "网络连接失败,请检查网络地址!";
+      }
+      alert(info);
+    },300);
+  }
+  function tclick(){
+    clearTimeout(timeId);
+    timeId = window.setTimeout(function () {
+      if (doorLink) {
+        window.location.assign(doorLink);
+      } else {
+        alert("网络连接失败,请检查网络地址!");
+      }
+    },300)
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+  var videoView = document.getElementById("camera--view");
+  var canvasElement = document.getElementById("canvas");
+  var canvas = canvasElement.getContext("2d");
+  var constraints = {
+    audio: false,
+    video: {
+      width: {min: 320, ideal: 1280, max: 2560},
+      height: {min: 240, ideal: 720, max: 1440},
+      frameRate: {
+        ideal: 120,
+        min: 10
+      },
+      // facingMode: "environment"
+      facingMode: {exact: "environment"}
+    }
+  };
+
+  function drawLine(begin, end, color) {
+    canvas.beginPath();
+    canvas.moveTo(begin.x, begin.y);
+    canvas.lineTo(end.x, end.y);
+    canvas.lineWidth = 4;
+    canvas.strokeStyle = color;
+    canvas.stroke();
+  };
+
+  // Access the device camera and stream to cameraView
+  function videoStart() {
+    navigator.mediaDevices
+        .getUserMedia(constraints)
+        .then(function (stream) {
+          //将视频流设置为video元素的源
+          videoView.srcObject = stream;
+          requestAnimationFrame(tick);
+        })
+        .catch(function (error) {
+          console.error("Something is wrong.", error);
+        });
+  };
+
+
+  function tick() {
+    if (videoView.readyState === videoView.HAVE_ENOUGH_DATA) {
+      //不显示扫描二维码的canvas
+      canvasElement.hidden = true;
+      canvasElement.height = videoView.videoHeight;
+      canvasElement.width = videoView.videoWidth;
+      canvas.drawImage(videoView, 0, 0, canvasElement.width, canvasElement.height);
+      var imageData = canvas.getImageData(0, 0, canvasElement.width, canvasElement.height);
+      var code = jsQR(imageData.data, imageData.width, imageData.height, {
+        inversionAttempts: "dontInvert",
+      });
+      console.log(canvasElement.width, ' ', canvasElement.height);
+      console.log(videoView.videoHeight, ' ', videoView.videoWidth);
+      console.log(videoView.readyState, ' ', videoView.HAVE_ENOUGH_DATA);
+      if (code) {
+        drawLine(code.location.topLeftCorner, code.location.topRightCorner, "#FF3B58");
+        drawLine(code.location.topRightCorner, code.location.bottomRightCorner, "#FF3B58");
+        drawLine(code.location.bottomRightCorner, code.location.bottomLeftCorner, "#FF3B58");
+        drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#FF3B58");
+        var linkhttp = code.data;
+        console.log('qrcode begins with: ', linkhttp.substring(0, 5));
+        // 判断是否是网络连接
+        if (linkhttp.substring(0, 4) === 'http') {
+          console.log('qrcode is: ', code.data);
+          // 确定是进门的二维码
+          if (linkhttp.indexOf("door" >= 0)) {
+            if (doorLink) {
+              window.location.assign(doorLink);
+            } else {
+              alert("网络连接失败!")
+            }
+          }else {
+            // 不是进门的二维码
+            var r = confirm("确定跳转到 " + linkhttp + " 吗？");
+            if (r) {
+              window.location.assign(linkhttp);
+            } else {
+              console.log('取消跳转');
+            }
+          }
+        } else {
+          alert(linkhttp);
+        }
+      }
+    }
+    setTimeout(() => {
+      requestAnimationFrame(tick);
+    }, 500);
+  };
+
+  window.addEventListener("load", videoStart, false);
+</script>
+</body>
+
+</html>
