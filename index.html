@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="./css/scanstyle.css">
   <script type="text/javascript" src="./js/jsQR.js"></script>
   <title>Scan Qrcode</title>
+  <style>
+    #footer{  
+      position: absolute;  bottom: 0; /* 关键 */  
+      left:0; /* IE下一定要记得 */  
+      height: 60px;         /* footer的高度一定要是固定值*/  
+    }  
+  </style>
 </head>
 
 <body>
@@ -16,8 +23,11 @@
 <div class="dropdown">
   <button onclick="myFunction()" ondblclick="tclick()" class="dropbtn">网络检查</button>
 </div>
-<a href="https://beian.miit.gov.cn/" target="_blank">皖ICP备18009389号</a>
 
+<!-- 页脚 -->  
+<div id="footer">  
+  <a href="https://beian.miit.gov.cn/" target="_blank">皖ICP备18009389号</a>
+</div>  
 <script>
   function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
